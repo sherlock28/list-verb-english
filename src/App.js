@@ -1,4 +1,3 @@
-import "./App.css";
 import { Layout } from "./components/Layout";
 import { Search } from "./components/Search";
 import { Results } from "./components/Results";
