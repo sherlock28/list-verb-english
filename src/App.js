@@ -1,15 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { Layout } from "./components/Layout";
+import { Search } from "./components/Search";
+import { Results } from "./components/Results";
+import { Title } from "./components/Title";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>List of verbs in english</p>
-        <p>Working...</p>
-      </header>
-    </div>
+    <Layout>
+      <Title />
+      <Search />
+      <Results />
+    </Layout>
   );
 }
 
