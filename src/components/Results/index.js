@@ -7,21 +7,24 @@ import {
     Tr,
     Th,
 } from '@chakra-ui/react'
-
-const listItem = ['item1', 'item2', 'item3'];
+import { listOfVerbs } from "../../data/listOfVerbs";
 
 export function Results() {
     return (<Table size='sm'>
         <Thead>
             <Tr>
-                <Th>To convert</Th>
-                <Th>into</Th>
-                <Th isNumeric>multiply by</Th>
+                <Th isNumeric>To convert</Th>
+                <Th>Type</Th>
+                <Th>Simple Form</Th>
+                <Th>Third Person</Th>
+                <Th>Simple Past</Th>
+                <Th>Past Participle</Th>
+                <Th>Gerund</Th>
+                <Th>Meaning</Th>
             </Tr>
         </Thead>
         <Tbody>
-            {listItem.map((item, index) => <Row key={index} data={item} />)}
-
+            {listOfVerbs.map(item => <Row key={item.id} data={item} />)}
         </Tbody>
     </Table>)
 }

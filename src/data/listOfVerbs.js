@@ -10,7 +10,7 @@ export const listOfVerbs = [
         "meaning": "Morar - Habitar - Tolerar",
     },
     {
-        "id": 1,
+        "id": 2,
         "type": "R",
         "simpleForm": "Absorb",
         "thirdPerson": "Absorbs",
