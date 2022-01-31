@@ -1,14 +1,10 @@
 import { Layout } from "./components/Layout";
-import { Search } from "./components/Search";
-import { Results } from "./components/Results";
-import { Title } from "./components/Title";
+import { Routes } from "routes";
 
 function App() {
   return (
     <Layout>
-      <Title />
-      <Search />
-      <Results />
+      <Routes />
     </Layout>
   );
 }
