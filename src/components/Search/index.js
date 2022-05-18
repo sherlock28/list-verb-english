@@ -1,6 +1,6 @@
 import React from "react";
 import { Input, Box, Text } from "@chakra-ui/react";
-import { useSearchVerbs } from "./hooks/useSearchVerbs";
+import { useSearchVerbs } from "hooks/useSearchVerbs";
 
 export function Search() {
     const { handleChange, handleSubmit, message } = useSearchVerbs();
