@@ -10,10 +10,10 @@ import {
 
 export function Results({ verbs }) {
     return (
-        <Table size='sm'>
+        <Table size='md'>
             <Thead>
                 <Tr>
-                    <Th isNumeric>To convert</Th>
+                    <Th isNumeric></Th>
                     <Th>Type</Th>
                     <Th>Simple Form</Th>
                     <Th>Third Person</Th>
