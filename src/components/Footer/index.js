@@ -17,7 +17,8 @@ export function Footer() {
             bg={useColorModeValue('gray.50', 'gray.900')}
             color={useColorModeValue('gray.700', 'gray.200')}
             mt={10}
-            padding={8}>
+            padding={8}
+            minW={'100vw'}>
             <Container
                 as={Stack}
                 py={4}

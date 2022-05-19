@@ -17,6 +17,7 @@ export function useSearchVerbs() {
         // filter();
     }
     
+    // eslint-disable-next-line
     useEffect(() => filter(), [target]);
 
     const filter = () => {
