@@ -31,7 +31,7 @@ export function ScrollToTop() {
     return (
         <Box
             pos="fixed"
-            bottom="0" right="0"
+            bottom="5" right="50"
             zIndex={100}>
             <Button
                 onClick={scrollToTop}
