@@ -8,7 +8,14 @@ import { ScrollToTop } from 'components/ScrollToTop';
 export function Layout({ children }) {
     return (
         <>
-            <Container maxW='6xl' mt={10} centerContent position='relative' zIndex={1}>
+            <Container
+                maxW='6xl'
+                mt={10}
+                centerContent
+                position='relative'
+                zIndex={1}
+                minH='80vh'
+            >
                 <Title />
                 {children}
                 <PaginationCmp />
