@@ -1,68 +1,40 @@
 import React from "react";
-import {
-    Pagination,
-    usePagination,
-    PaginationNext,
-    PaginationPage,
-    PaginationPrevious,
-    PaginationContainer,
-    PaginationPageGroup,
-} from "@ajna/pagination";
-import { Box } from '@chakra-ui/react'
+import { Flex, IconButton, Text } from "@chakra-ui/react";
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 
-export function PaginationCmp() {
-    const {
-        currentPage,
-        setCurrentPage,
-        pagesCount,
-        pages
-    } = usePagination({
-        pagesCount: 8,
-        initialState: { currentPage: 1 },
-    });
-
+export const Pagination = ({ next, prev, currentPage, maxPage }) => {
     return (
-        <Box mt={10}>
-            <Pagination
-                pagesCount={pagesCount}
-                currentPage={currentPage}
-                onPageChange={setCurrentPage}
+        <Flex
+            my={2}
+            px={2}
+            py={1}
+            minWidth={0}
+            justifyContent="space-between"
+            overflow="hidden"
+        >
+            <IconButton
+                aria-label="previous page"
+                variant="ghost"
+                icon={<ChevronLeftIcon />}
+                borderRadius={20}
+                onClick={() => prev()}
+                _focus={{ outline: "none", border: "none " }}
             >
-                <PaginationContainer>
-                    <PaginationPrevious
-                        padding={2}
-                        margin={2}
-                        onClick={() =>
-                            console.log("Click on previous page")
-                        }
-                    >Previous</PaginationPrevious>
-                    <PaginationPageGroup>
-                        {pages.map((page) => (
-                            <PaginationPage
-                                padding={2}
-                                margin={2}
-                                key={`pagination_page_${page}`}
-                                page={page}
-                                onClick={() =>
-                                    console.log("Change page to", page)
-                                }
-                                _current={{
-                                    bg: "gray.400",
-                                    fontSize: "sm",
-                                    w: 7
-                                }}
-                            />
-                        ))}
-                    </PaginationPageGroup>
-                    <PaginationNext
-                        padding={2}
-                        margin={2}
-                        onClick={() =>
-                            console.log("Click on next page")
-                        }
-                    >Next</PaginationNext>
-                </PaginationContainer>
-            </Pagination>
-        </Box>
+                prev
+            </IconButton>
+            <Text mt={2} fontSize="sm">
+                page {currentPage} of {maxPage}
+            </Text>
+            <IconButton
+                aria-label="next page"
+                variant="ghost"
+                icon={<ChevronRightIcon />}
+                borderRadius={20}
+                onClick={() => next()}
+                _focus={{ outline: "none", border: "none " }}
+            >
+                Next
+            </IconButton>
+        </Flex>
     );
 };

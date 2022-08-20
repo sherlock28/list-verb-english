@@ -2,7 +2,6 @@ import React from 'react';
 import { Container } from '@chakra-ui/react'
 import { Title } from "components/Title";
 import { Footer } from "components/Footer";
-import { PaginationCmp } from 'components/Pagination';
 import { ScrollToTop } from 'components/ScrollToTop';
 
 export function Layout({ children }) {
@@ -18,7 +17,6 @@ export function Layout({ children }) {
             >
                 <Title />
                 {children}
-                <PaginationCmp />
             </Container>
             <ScrollToTop />
             <Footer />
