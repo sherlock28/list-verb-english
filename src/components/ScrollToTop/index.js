@@ -31,12 +31,12 @@ export function ScrollToTop() {
     return (
         <Box
             pos="fixed"
-            bottom="5" right="50"
+            bottom="10" right="30"
             zIndex={100}>
             <Button
                 onClick={scrollToTop}
                 padding={0}
-                margin={5}
+                margin={0}
                 bg={'gray.400'}
                 color={'whiteAlpha.900'}
                 borderRadius={50}
