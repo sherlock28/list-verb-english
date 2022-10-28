@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ajna/pagination": "1.4.17",
     "@chakra-ui/icons": "2.0.8",
     "@chakra-ui/react": "1.7.4",
     "@emotion/react": "11.7.1",
