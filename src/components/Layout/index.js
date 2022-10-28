@@ -3,6 +3,7 @@ import { Container } from '@chakra-ui/react'
 import { Title } from "components/Title";
 import { Footer } from "components/Footer";
 import { ScrollToTop } from 'components/ScrollToTop';
+import { ToggleTheme } from "components/ToggleTheme";
 
 export function Layout({ children }) {
     return (
@@ -15,6 +16,7 @@ export function Layout({ children }) {
                 zIndex={1}
                 minH='80vh'
             >
+                <ToggleTheme />
                 <Title />
                 {children}
             </Container>
