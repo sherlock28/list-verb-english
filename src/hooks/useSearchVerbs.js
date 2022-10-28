@@ -6,10 +6,10 @@ export function useSearchVerbs() {
     const { filteredVerbs, setFilteredVerbs } = useContext(VerbsContext);
 
     const [message, setMessage] = useState("");
-    const [target, setTarger] = useState("");
+    const [target, setTarget] = useState("");
 
     const handleChange = e => {
-        setTarger(e.target.value);
+        setTarget(e.target.value);
     }
     
     const handleSubmit = (e) => {
@@ -25,6 +25,9 @@ export function useSearchVerbs() {
 
         if (filteredVerbs.length === 0) {
             setMessage("Verbo no encontrado");
+        }
+        if (filteredVerbs.length === 0 && target === "") {
+            setMessage("");
         }
         return;
     }
